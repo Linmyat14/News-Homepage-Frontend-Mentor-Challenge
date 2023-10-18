@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./news-homepage-main/assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>News Homepage</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="./assets/images/logo.svg" alt="" />
+        <ul class="nav-links">
+          <li>Home</li>
+          <li>New</li>
+          <li>Popular</li>
+          <li>Trending</li>
+          <li>Categories</li>
+        </ul>
+        <div class="hamburger">
+          <img src="./assets/images/icon-menu.svg" alt="">
+        </div>
+      </nav>
+
+    </header>
+    <div class="container">
+      <div class="main-news">
+        <img src="./assets/images/image-web-3-desktop.jpg" alt="">
+
+        <div class="main-article">
+          <div class="title">
+            <h1>The Bright <br>Future of<br> Web 3.0?</h2>
+          </div>
+          <div class="article-description">
+            <p>
+              We dive into the next evolution of the web that <br class="break">claims to put the power of the platforms back <br class="break">into the hands of the people. 
+  But is it really<br class="break"> fulfilling its promise?
+            </p>
+            <button>read more</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="articles">
+        <h3>New</h3>
+        <div class="article-one article">
+          <a>Hydrogen VS Electric Cars</a>
+          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          <hr class="line">
+        </div>
+        <div class="article">
+          <a>The Downsides of AI Artistry</a>
+          <p>What are the possible adverse effects of <br> on-demand AI image generation?</p>
+          <hr class="line">
+        </div>
+        <div class="article">
+          <a>Is VC Funding Drying Up?</a>
+          <p> Private funding by VC firms is down 50% <br>YOY. We take a look at what that means.</p>
+          <hr class="last-line">
+        </div>
+      </div>
+
+      
+        
+    </div>
+    <div class="news-section">
+      <div class="news news-one">
+        <img src="./assets/images/image-retro-pcs.jpg" alt="">
+        <div class="news-topics">
+          <h3>01</h3>
+          <a>Reviving Retro PCs</a>
+          <p>What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </div>
+
+      <div class="news news-two">
+        <img src="./assets/images/image-top-laptops.jpg" alt="">
+        <div class="news-topics">
+          <h3>02</h3>
+          <a>Top 10 Laptops of 2022</a>
+          <p>Our best picks for various needs and budgets.</p>
+        </div>
+      </div>
+
+      <div class="news news-three">
+        <img src="./assets/images/image-gaming-growth.jpg" alt="">
+        <div class="news-topics">
+          <h3>03</h3>
+          <a>The Growth of Gaming</a>
+          <p>How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      })
+
+      document.querySelectorAll(".nav-links").forEach(n => n.addEventListener("click", ()=> {
+        hamburger.classList.remove("active");
+        navLinks.classList.toggle("active");
+
+    }))
+    </script>
+  </body>
+</html>
